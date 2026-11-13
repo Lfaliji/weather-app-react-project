@@ -10,6 +10,7 @@ export default function Weather() {
             <input
               type="search"
               placeholder="Enter a city..."
+              autoFocus="on"
               className="form-control"
             />{" "}
           </div>
@@ -17,7 +18,7 @@ export default function Weather() {
             <input
               type="submit"
               value="Search"
-              className="btn btn-primary"
+              className="btn btn-primary w-100"
             />{" "}
           </div>
         </div>
@@ -27,13 +28,18 @@ export default function Weather() {
         <li>Friday 17:00</li>
         <li>Mostly Cloudy</li>
       </ul>
-      <div className="row">
+      <div className="row mt-3">
         <div className="col-6">
-          <img
-            src="https://www.gstatic.com/weather/conditions/v1/svg/partly_cloudy_night_light.svg"
-            alt="Mostly Cloudy"
-          />
-          7°C|°F
+          <div className="weather-temperature">
+            <img
+              src="https://www.gstatic.com/weather/conditions/v1/svg/partly_cloudy_night_light.svg"
+              alt="Mostly Cloudy"
+            />
+            <span className="temperature">7</span>
+            <span className="celsius-unit">°C</span>
+            <span className="unit-separator">|</span>
+            <span className="fahrenheit-unit">°F</span>
+          </div>
         </div>
         <div className="col-6">
           <ul>
