@@ -1,0 +1,11 @@
+.WeatherForecastDay-temperature-max {
+  color: #16171a;
+}
+
+.WeatherForecastDay-temperature-min {
+  margin-left: 5px;
+}
+
+.WeatherForecastDay-day {
+  margin-top: 40px;
+}
