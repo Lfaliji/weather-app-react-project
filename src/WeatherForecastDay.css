@@ -9,3 +9,7 @@
 .WeatherForecastDay-day {
   margin-top: 40px;
 }
+
+.WeatherForecastDay-pack {
+  margin-left: 20px;
+}
