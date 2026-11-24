@@ -1,29 +1,12 @@
 import React from "react";
+import moment from "moment-timezone";
+import tzlookup from "tz-lookup";
 
 export default function FormattedDate(props) {
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[props.date.getDay()];
-  let hours = props.date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-
-  let minutes = props.date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  return (
-    <div>
-      {day} {hours}:{minutes}
-    </div>
+  let timezone = tzlookup(
+    props.coordinates.latitude,
+    props.coordinates.longitude,
   );
+
+  return <div>{moment(props.date).tz(timezone).format("dddd HH:mm")}</div>;
 }
